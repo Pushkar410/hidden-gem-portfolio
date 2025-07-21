@@ -1,4 +1,6 @@
+
 import { useState, useEffect } from 'react';
+import ProfilePicture from './ProfilePicture';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,8 +31,11 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-space-grotesk font-bold text-xl text-foreground">
-            Pushkar R Adiga
+          <div className="flex items-center space-x-3">
+            <ProfilePicture size="sm" />
+            <div className="font-space-grotesk font-bold text-xl text-foreground">
+              Pushkar R Adiga
+            </div>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">

@@ -1,4 +1,6 @@
+
 import { ArrowDown } from 'lucide-react';
+import ProfilePicture from './ProfilePicture';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -18,9 +20,18 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="reveal">
-          <h1 className="font-space-grotesk font-bold text-5xl md:text-7xl lg:text-8xl mb-6 text-foreground">
-            Pushkar R Adiga
-          </h1>
+          {/* Profile Picture and Name Section */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
+            <ProfilePicture 
+              size="xl" 
+              className="order-2 md:order-1" 
+            />
+            <div className="order-1 md:order-2">
+              <h1 className="font-space-grotesk font-bold text-4xl md:text-6xl lg:text-7xl text-foreground">
+                Pushkar R Adiga
+              </h1>
+            </div>
+          </div>
           
           <div className="max-w-2xl mx-auto mb-12">
             <p className="font-space-grotesk text-xl md:text-2xl font-medium text-primary mb-4">

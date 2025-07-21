@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'space-grotesk': ['Space Grotesk', 'sans-serif'],
+				'dm-sans': ['DM Sans', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom portfolio colors
+				'navy-deep': 'hsl(var(--navy-deep))',
+				'navy-primary': 'hsl(var(--navy-primary))',
+				'navy-light': 'hsl(var(--navy-light))',
+				'grey-dark': 'hsl(var(--grey-dark))',
+				'grey-medium': 'hsl(var(--grey-medium))',
+				'grey-light': 'hsl(var(--grey-light))',
+				'glow': 'hsl(var(--glow))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

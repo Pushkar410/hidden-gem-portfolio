@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Hidden Gem Portfolio Design System
+Colors: Deep navy blue and grey palette for professionalism with personality
+Fonts: Space Grotesk (headings), DM Sans (body text)
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Hidden Gem Portfolio - Deep Navy & Grey Palette */
+    --background: 220 15% 7%;
+    --foreground: 210 12% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 12% 9%;
+    --card-foreground: 210 12% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 12% 9%;
+    --popover-foreground: 210 12% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 76% 65%;
+    --primary-foreground: 220 15% 7%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 8% 15%;
+    --secondary-foreground: 210 12% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 8% 12%;
+    --muted-foreground: 210 8% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 76% 65%;
+    --accent-foreground: 220 15% 7%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 8% 18%;
+    --input: 220 8% 15%;
+    --ring: 217 76% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+    
+    /* Custom portfolio colors */
+    --navy-deep: 220 30% 8%;
+    --navy-primary: 217 76% 65%;
+    --navy-light: 217 50% 85%;
+    --grey-dark: 220 8% 15%;
+    --grey-medium: 210 8% 65%;
+    --grey-light: 210 12% 92%;
+    --glow: 217 76% 65%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217, 76%, 65%), hsl(220, 30%, 25%));
+    --gradient-glow: radial-gradient(circle at center, hsl(217, 76%, 65%, 0.15), transparent 70%);
+    --gradient-card: linear-gradient(145deg, hsl(220, 12%, 9%), hsl(220, 8%, 12%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(217, 76%, 65%, 0.3);
+    --shadow-card: 0 8px 32px hsl(220, 30%, 3%, 0.5);
+    --shadow-subtle: 0 2px 8px hsl(220, 30%, 3%, 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +127,96 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  /* Glow effects */
+  .glow-effect {
+    @apply transition-all duration-300;
+  }
+  .glow-effect:hover {
+    filter: drop-shadow(var(--shadow-glow));
+  }
+  
+  /* Card styles */
+  .card-gradient {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+  
+  /* Skill pill animations */
+  .skill-pill {
+    @apply bg-secondary/50 border border-border/50 px-4 py-2 rounded-full text-sm font-medium;
+    @apply transition-all duration-300 hover:bg-primary/20 hover:border-primary/50;
+    @apply hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:scale-105;
+  }
+  
+  /* Smooth reveal animation */
+  .reveal {
+    @apply opacity-0 translate-y-8;
+    animation: reveal 0.8s ease-out forwards;
+  }
+  
+  /* Project shimmer effect */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary) / 0.1),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  /* Social link hover effects */
+  .social-link {
+    @apply text-muted-foreground hover:text-primary transition-all duration-300;
+    @apply hover:scale-110 hover:drop-shadow-[0_0_8px_hsl(var(--primary)/0.5)];
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+    }
+  }
+  
+  /* Animation classes */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
   }
 }

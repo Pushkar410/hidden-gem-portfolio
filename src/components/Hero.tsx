@@ -23,6 +23,7 @@ const Hero = () => {
           {/* Profile Picture and Name Section */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
             <ProfilePicture 
+              src="/lovable-uploads/434b77fc-91b0-474b-96d1-252df19dcc65.png"
               size="xl" 
               className="order-2 md:order-1" 
             />

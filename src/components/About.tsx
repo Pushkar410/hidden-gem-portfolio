@@ -1,3 +1,5 @@
+import InteractiveCircle from './InteractiveCircle';
+
 const About = () => {
   return (
     <section id="about" className="py-20 lg:py-32">
@@ -11,7 +13,7 @@ const About = () => {
             <div className="card-gradient rounded-2xl p-8 lg:p-12 border border-border/50">
               <div className="text-center">
                 <div className="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-8 flex items-center justify-center glow-effect">
-                  <span className="font-space-grotesk font-bold text-2xl text-primary-foreground">PR</span>
+                  <InteractiveCircle />
                 </div>
                 
                 <div className="space-y-6">

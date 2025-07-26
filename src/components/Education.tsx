@@ -113,7 +113,7 @@ const Education = () => {
                           Primary & Secondary Education
                         </h3>
                         <p className="font-dm-sans text-lg text-secondary font-medium">
-                          1st to 10th Grade
+                          Primary & Secondary Education
                         </p>
                       </div>
                       

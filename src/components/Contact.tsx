@@ -12,7 +12,7 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       username: 'Pushkar R. Adiga',
-      url: 'https://linkedin.com/in/pushkar-r-adiga',
+      url: 'https://www.linkedin.com/in/pushkar-r-adiga-156223365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       icon: Linkedin,
       description: 'Professional network'
     },
@@ -40,7 +40,7 @@ const Contact = () => {
               </p>
               
               <a 
-                href="mailto:pushkar@example.com"
+                href="mailto:ram.linkedin410@gmail.com"
                 className="inline-flex items-center space-x-3 bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-dm-sans font-medium text-lg hover:bg-primary/90 glow-effect transition-all duration-300 group"
               >
                 <Mail className="w-6 h-6" />

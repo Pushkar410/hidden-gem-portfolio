@@ -122,6 +122,11 @@ const Education = () => {
                           <MapPin className="w-5 h-5" />
                           <span className="font-dm-sans">Kanva Public School</span>
                         </div>
+                        
+                        <div className="flex items-center space-x-3 text-muted-foreground">
+                          <Calendar className="w-5 h-5" />
+                          <span className="font-dm-sans">2012 – 2022</span>
+                        </div>
                       </div>
                     </div>
                   </div>

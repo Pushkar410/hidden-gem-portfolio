@@ -113,7 +113,7 @@ const Education = () => {
                           Primary & Secondary Education
                         </h3>
                         <p className="font-dm-sans text-lg text-primary font-medium">
-                          ICSEC BOARD
+                          ICSCE BOARD
                         </p>
                       </div>
                       

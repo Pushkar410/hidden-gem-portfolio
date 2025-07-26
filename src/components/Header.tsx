@@ -39,6 +39,7 @@ const Header = () => {
               { label: 'Education', id: 'education' },
               { label: 'Skills', id: 'skills' },
               { label: 'Projects', id: 'projects' },
+              { label: 'Certificates', id: 'certificates' },
               { label: 'Contact', id: 'contact' }
             ].map((item) => (
               <button

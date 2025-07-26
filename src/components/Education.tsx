@@ -102,8 +102,8 @@ const Education = () => {
                 <div className="relative z-10">
                   <div className="flex items-start space-x-6">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center">
-                        <GraduationCap className="w-8 h-8 text-secondary" />
+                      <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center">
+                        <GraduationCap className="w-8 h-8 text-primary" />
                       </div>
                     </div>
                     
@@ -112,8 +112,8 @@ const Education = () => {
                         <h3 className="font-space-grotesk font-bold text-2xl lg:text-3xl text-foreground mb-2">
                           Primary & Secondary Education
                         </h3>
-                        <p className="font-dm-sans text-lg text-secondary font-medium">
-                          Primary & Secondary Education
+                        <p className="font-dm-sans text-lg text-primary font-medium">
+                          ICSEC BOARD
                         </p>
                       </div>
                       
